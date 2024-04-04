@@ -16,9 +16,6 @@
     padding: 8px;
     width: 200px;
     align-self: center;
-
- 
-
 }
 
 .btn:hover {
@@ -27,5 +24,11 @@
 }
 
 .field {
+    outline: none;
     padding: 8px;
+    border: 1px solid black;
+}
+
+.field:focus {
+   border-color: rgba(0, 0, 255, 0.863);
 }

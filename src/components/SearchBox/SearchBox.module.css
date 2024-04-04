@@ -8,4 +8,11 @@
 }
 .input {
     padding: 8px;
+    border: 1px solid black;
+    outline: none;
+}
+
+.input:focus {
+    border-color: blue;
+    padding: 8px;
 }
