@@ -3,6 +3,8 @@ import { Formik, Field, Form } from "formik";
 import { useId } from "react";
 import { nanoid } from "nanoid";
 
+import css from "./ContactForm.module.css";
+
 const validationSchema = Yup.object().shape({
   name: Yup.string()
     .trim()
@@ -38,19 +40,28 @@ const ContactForm = ({ addContact }) => {
       onSubmit={handleSubmit}
       validationSchema={validationSchema}
     >
-      <Form>
+      <Form className={css.form}>
         <label htmlFor={nameFieldId}>Name</label>
-        <Field id={nameFieldId} name="name" placeholder="Jane" type="text" />
+        <Field
+          className={css.field}
+          id={nameFieldId}
+          name="name"
+          placeholder="Jane"
+          type="text"
+        />
 
         <label htmlFor={numberFieldId}>Number</label>
         <Field
+          className={css.field}
           id={numberFieldId}
           name="number"
           placeholder="380678377445"
           type="text"
         />
 
-        <button type="submit">Add Contact</button>
+        <button className={css.btn} type="submit">
+          Add Contact
+        </button>
       </Form>
     </Formik>
   );
